@@ -1,62 +1,22 @@
 import React from 'react'
-import BlackSquare from './BlackSquare'
-import WhiteSquare from './WhiteSquare'
-
+import Even from './Even'
+import Odd from './Odd'
 
 
 const Board = ()=>{
-   
-    
-    const evenRows = () => {
-      const squares=[]
-        for(let i = 0; i < 8; i++)
-       {
-            if (i % 2 ) {
-                squares.push(<div key={i} style={{ width: '12%', height: '19%' }}><WhiteSquare /></div>)
-                
-            }
-            else{
-                squares.push(<div key={i} style={{ width: '12%', height: '19%' }}><BlackSquare /></div>)
-            }
-
-
-        }
-        
-      return squares
-    }
-
-    const oddRows = () => {
-        const squares = []
-        for (let i = 0; i < 8; i++) {
-            if (i % 2) {
-                squares.push(<div key={i} style={{ width: '12%', height: '19%' }}><BlackSquare /></div>)
-                
-
-            }
-            else {
-                squares.push(<div key={i} style={{ width: '12%', height: '19%' }}><WhiteSquare /></div>)
-            }
-
-
-        }
-
-        return squares
-    }
-
-
      
 
         
         return(
             <div style={{ display: 'flex', flexWrap: 'wrap',  height: 600, width: '100%' }} >
-                {evenRows()}
-                {oddRows()}
-                {evenRows()}
-                {oddRows()}
-                {evenRows()}
-                {oddRows()}
-                {evenRows()}
-                {oddRows()}
+                <Even row={1}/>
+                <Odd row ={1}/>
+                <Even />
+                <Odd />
+                <Even />
+                <Odd />
+                <Even row={2}/>
+                <Odd row={2}/>
                 
             
               
