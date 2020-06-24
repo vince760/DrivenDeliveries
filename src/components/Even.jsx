@@ -8,11 +8,11 @@ const Even=(props)=>{
         for (let i = 0; i < 8; i++) {
             
             if (i % 2) {
-                squares.push(<div key={i} style={{ width: '12%', height: '19%' }}><WhiteSquare row={props.row}  /></div>)
+                squares.push(<div key={i} style={{ width: '12%', height: '19%' }}><WhiteSquare key={i} row={props.row}  /></div>)
 
             }
             else {
-                squares.push(<div key={i} style={{ width: '12%', height: '19%' }}><BlackSquare row={props.row} /></div>)
+                squares.push(<div key={i} style={{ width: '12%', height: '19%' }}><BlackSquare key={i} row={props.row} /></div>)
             }
 
 

@@ -19,8 +19,15 @@ const BlackSquare=(props)=>{
         width: "100%",
         height: "100%"
  }}>
-            {props.row === 1 ? <div style={{ paddingTop: 17 }} onClick={checkedIcon}><FontAwesomeIcon size="4x" icon={faChessQueen} style={checked === true ? { color: 'yellow', borderColor: "yellow" } : { color: 'red' }}   /></div> : null}       
-            {props.row === 2 ? <div style={{ paddingTop: 17 }} onClick={checkedIcon}><FontAwesomeIcon size="4x" icon={faChessQueen} style={checked === true ? { color: 'yellow', borderColor: "yellow" } : { color: 'black' }} /></div> : null}
+            {props.row === 1 || props.row === 2 ? 
+            <div style={{ paddingTop: 17 }} onClick={checkedIcon}>
+                <FontAwesomeIcon size="4x" icon={faChessQueen} style={checked === true ? 
+                    { color: 'yellow' } : { color: 'red' }}   /></div> : null} 
+                          
+            {props.row === 7 || props.row === 8 ? 
+            <div style={{ paddingTop: 17 }} onClick={checkedIcon}>
+                <FontAwesomeIcon size="4x" icon={faChessQueen} style={checked === true ? 
+                    { color: 'yellow' } : { color: 'black' }} /></div> : null}
      </div>
     )
 }
